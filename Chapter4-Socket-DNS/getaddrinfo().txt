@@ -1,0 +1,5 @@
+bu metod ile ağ bilgilerini alabiliriz
+socket.getaddrinfo('gatech.edu','www')
+bu istek ile verilen adresteki ve www isteğindeki bilgilerin bir demetini döndürür
+
+getaddrinfo ile bind işlemlerini connect işlemlerini ve server a gelen bağlantıların bilgilerini alabiliriz

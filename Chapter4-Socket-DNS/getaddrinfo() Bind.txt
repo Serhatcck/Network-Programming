@@ -1,0 +1,10 @@
+getaddrinfo() ile servisi ayağa kaldırmak için gerekli  bilgileri alabiliriz 
+
+smp servis için alınması gereken bilgiler
+getaddrinfo(None, 'smtp', 0, socket.SOCK_STREAM, 0, socket.AI_PASSIVE)
+
+dns servis için alınması gereken bilgiler
+getaddrinfo(None, 53, 0, socket.SOCK_DGRAM, 0, socket.AI_PASSIVE)
+
+localhost'ta çalıştırmak istediğimz bir smpt servis
+getaddrinfo('127.0.0.1', 'smtp', 0, socket.SOCK_STREAM, 0)

@@ -1,0 +1,14 @@
+Soketi tsl ile oluşturmak için üç adım gerekir
+
+İlk olarak setrifika doğrulama ve şifre seçimi ile ilgili tüm tercihlerinizi bilen bir TLS bağlan nesnesi oluştur
+
+İkinci olarak OpenSSl kitaplığının TCP bağlantınızın kontrolünü ele geçirmesine,diğer uçla gerekli karşılamaları değiş tokuş etmesine
+ve şifrelenmiş bir kanal kurmasına izin vermek için bir wrap_socket() kullanımı
+
+Son olarak size döndürülen sssl_sock ile tüm diğer iletişimi gerçekleştirin , böylece TLS katmanı her zaman verilerinizi kabloya 
+ulaşmadan önce şifreleme şansına sahip olur. Bu sarmalayıcı TCP soketleriyle ilgili send(), recv() gibi normal bir soket ile aynı
+yöntemlerin tümünü sunar
+
+
+server için ssl.Purpose.CLIENT_AUTH
+client için ssl.Purpose.SERVER_AUTH  

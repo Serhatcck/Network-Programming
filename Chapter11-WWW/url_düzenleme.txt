@@ -1,0 +1,25 @@
+urllerdeki boşlukları silmek ve eklemek için :
+>>> quote('Q&A/TCP IP')
+'Q%26A/TCP%20IP'
+>>> unquote('Q%26A/TCP%20IP')
+'Q&A/TCP IP'
+
+
+urjoin ile urlleri düzenleyebiliriz
+
+from urllib.parse import urljoin
+
+>>> from urllib.parse import urljoin
+>>> base = 'http://tools.ietf.org/html/rfc3986'
+>>> urljoin(base, 'rfc7320')
+'http://tools.ietf.org/html/rfc7320'
+>>> urljoin(base, '.')
+'http://tools.ietf.org/html/'
+>>> urljoin(base, '..')
+'http://tools.ietf.org/'
+>>> urljoin(base, '/dailydose/')
+'http://tools.ietf.org/dailydose/'
+>>> urljoin(base, '?version=1.0')
+'http://tools.ietf.org/html/rfc3986?version=1.0'
+>>> urljoin(base, '#section-5.4')
+'http://tools.ietf.org/html/rfc3986#section-5.4'

@@ -1,0 +1,2 @@
+Hala wsgi ara yazılımını yazan ve kullanan geliştiriciler olsa da , günümüzde çoğu python programcısı wsgi yi yalnızca
+bir uygulama veya çerçeve ile gele nhttp isteklerini dinleyen web sunucusu arasında sunduğu takılabilirlik için kullanıyor

@@ -1,0 +1,18 @@
+urllib ile url bilgilerini parçalayabiliriz
+
+u = urlsplit('https://www.google.com/search?q=apod&btnI=yes')
+
+u.scheme = 'https'
+u.netloc = 'www.google.com'
+u.path = '/search'
+u.query = 'q=apod&btnI=yes'
+u.fragment = ''
+
+->netloc:network location
+
+u = urlsplit('https://brandon:atigdng@localhost:8000/')
+u.netloc = 'brandon:atigdng@localhost:8000'
+u.username = 'brandon'
+u.password = 'atigdng'
+u.hostname = 'localhost'
+u.port = 8000

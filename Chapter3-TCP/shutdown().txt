@@ -1,0 +1,13 @@
+shutdown() metodu iki yönlü bir sokette ileişimin her iki yönünü de sonladınrmak için kullanılabilir.
+Argümanları bu üç sembolden biri olabilir:
+SHUT_WR: Kullanılan en yaygın değerdir.Bu değer, çağıranın sokete daha fazla veri yazmayacağını ve diğer
+ucundan okunduğunda daha fazla veri olmadığını ve dosya sonunu gösterdiğini yanıtlaması gerektiğini belirtir
+
+SHUT_RD:Soket akışını kapatmak için kullanılır,böylece eşiniz soket üzerinde size daha fazla veri göndermeye
+çalışırsa bir dosya sonu hatasıyla karşılaşır
+
+SHUT_RDWR:bu soket üzerinde iletişimi her iki yönde kapatır. 
+
+
+close() ile kapattığın zaman soket üzerindeki o işlem kapanır
+shutdown()ile kapattığın zaman ise tüm soket kapanır

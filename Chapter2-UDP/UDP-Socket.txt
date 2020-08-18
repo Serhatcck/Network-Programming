@@ -1,0 +1,3 @@
+UDP ile bir socket oluşturduğumuz zaman bu soketin ailesi AF_INET ve internet protokol ailesi SOCK_DGRAM
+olmalıdır.
+sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)

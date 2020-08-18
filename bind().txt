@@ -1,0 +1,3 @@
+Kodlarken kullandığımız bind() metodu programın istemci mi yoksa sunucu mu olacağına karar vermez.
+Programın sunucu olduğunu belirten metod listen() metodudur.
+

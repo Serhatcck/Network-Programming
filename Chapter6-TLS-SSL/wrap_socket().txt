@@ -1,0 +1,4 @@
+wrap_socket() için sağlanan iki önemli seçenek vardır; biri sunucu için diğeri istemci için.
+Sunucuya server_side = True seçeneği verilir,çünkü iki uçtan biri sunucunun sorumluluklarını üstlenmek zorundadır,aksi takdirde
+anlaşma bir hata ile başarısız olur
+İstemcide ise server_hostname=<host_name> seçeneği verilir

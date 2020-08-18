@@ -1,0 +1,12 @@
+Soketler için dört değer belirtildiğini görebilirsiniz.İkisi soketi yapılandırmak için diğer ikisi ise bind() çağrısını adreslemek için
+Aslında beşinci bir olası koordinat vardır çünkü socket() isteğe bağlı üçüncü bir argüman alır ve toplamda beş seçim yapar.
+
+İlk olarak adres ailesi en büyük kararı verir.Ne tür bir ağ ile konuşmak istediğinizi belirtir(AF_INET)
+
+İkicisi seçtiğiniz ağda kullanmak istediğiniz belirli iletişim tekniğini seçer.(SOCK_DGRAM/SOCK_STREAM)
+
+Socket() çağrısında üçüncü alan olan portokol nadiren kullanılır, çünkü adres ailesini ve sokte türünü belirledikten sonra, olası 
+protokolleri genellikle tek bir ana seçeneğe daraltmış olursunuz.Bu nedenle programcılar genellikle bunu belirtmeden bırakır veya 
+otomatik olarak seçilmesini sağlamak için 0 değerini sağlar 
+
+Son olarak bağlantı yapmak için kullanılan dördüncü ve beşinci değerler, IP adresi ve port numarasıdır

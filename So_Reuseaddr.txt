@@ -1,0 +1,11 @@
+Sunucuyu SO_REUSEADDR seçeneği ile başlatmamızın sebebi aşşağıda açıklanmıştır:
+
+İşletim sisteminiz ağ yığını için son derece dikkatlidir.Sadece dinleyen bir sunucu soketi derhal kapatılabilir ve unutulabilir.
+Ancak bir istemciyle konuşan bağlı bir TCP soketi hem istemci hem de sunuc bağlantılarını kapatmış ve her yönde FIN paketleri göndermiş
+olsa bile hemen kaybolmaz.Bunun nedeni ağ yığının soketi kapatan son paketi gönderdikten sonra biile alındığından emin olmanın
+bir yolu yoktur.
+
+Programımızda close() ile kapattığımız sunucuyu hemen sonra tekrar çalıştırmaya çalışırsak yukarıda anlatılan nedenden dolayı 
+hata alırız.
+Bu nedenle soket seçeneği SO_REUSEADDR belirterek hali hazırda kapatılmış olabilecek bir bağlantı noktasına sahip olabileceğiniz
+anlamına gelir

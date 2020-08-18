@@ -1,0 +1,9 @@
+Tanımlanmış portlar (0-1023) en önemli ve yaygın olarak kullanılan hizmetler içindir.Unix benzeri birçok işletim sisteminde,
+normal kullanıcı programları bu bağlantı noktalarını dinleyemez.
+
+Kayıtlı portlar(1024-49151) genellikle işletim sistemleri tarafından özeli olarak ele alınmaz.Herhangi bir kullanıcı
+bu portlarda çalışan programlar yazabilir.Ancak belirli hizmetler IANA tarafından kaydedilebilir ve IANA, bunları 
+atanan hizmetlerinden başka bir şey için kullanmanızı önermez
+
+Kalan bağlantı noktası numaraları(49152-65535) herhanbi bir kullanım için ücretsizdir.Modern işletim sistemlerinin rasgele 
+port numaraları oluşturmak için çizdiği havuzdur

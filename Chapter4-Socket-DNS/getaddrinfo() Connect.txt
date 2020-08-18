@@ -1,0 +1,9 @@
+bilgisayarın ulaşamadığı bağlantıları filtrelemek için getaddrinfo() ya AI_ADDRCONFIG bayrağını eklememeiz gerekir
+Örneğin bir kuruluş hem IPv4 hem de IPv6 adreslerine sahip olabilir. Host sadece IPv4'ü destekliyorsa,filtrelenen sonuçların
+yalnızca o ailedeki adresleri içermesini istersiniz.
+
+Yerel makinenin IPv6 da çalıştığını ve istek yapılan makinenin IPv4 de çalıştığı durumlarda 
+v4 adreslerinin v6 adreseleri olarak yeniden kodlanmış halini görmek için AI_V4MAPPED bayrağını eklemeniz gerekir
+
+getaddrinfo('iana.org', 'www', 0, socket.SOCK_STREAM, socket.AI_ADDRCONFIG | socket.AI_V4MAPPED)
+

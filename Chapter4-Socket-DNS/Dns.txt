@@ -1,0 +1,7 @@
+Dns kuralları rfc 5321 belirtilmiştir
+IPv4 için A
+IPv6 için AAAA
+Server için NS
+Email için MX
+
+Eğer CNAME belirtilmişse MX ve A kayıtları içinde aranır

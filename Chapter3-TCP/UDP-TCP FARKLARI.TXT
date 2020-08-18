@@ -1,0 +1,3 @@
+Udp'de send() ve recv() datagramı gönder ve datagramı al anlamlarına geliyor ve her datagram atomik bir yapıya sahip.
+Ancak tcp veri akışı iletimi sırasında birkaç farklı boyuttaki peketlere bölebilir ve daha sonra bunları alıcı uçta yavaş yavaş
+yeniden birleştirebilir.

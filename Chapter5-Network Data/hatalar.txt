@@ -1,0 +1,10 @@
+OSError:Bu soket modülünün en önemli öğesidir ve ağ aktarımın herhangi bir aşamasında meydana gelebilecek neredeyse 
+her hata için raised olacaktır.Bu , hiç beklemediğinizde bile , neredeyse tüm soket çağrıları sırasında ortaya çıkabilir.
+
+socket.gaierror:Bu istisna, getaddrinfo()sorduğunuz bir adı veya hizmeti bulamadığında ortaya çıkar adındaki g,a,i harflerinin
+nedeni budur.Sadece getaddrinfo() kullanıldığında değil,aynı zamanda bind(),veya connect() gibi çağrıya bir IP adresi yerine bir 
+domain gönderirseniz ve domain araması başarısız olursa ortaya çıkar.
+
+socket.timeout:Bu istisna,yalnızca siz veya kullandığınız bir kitaplık, bir send() veya recv() işleminin tamamlanması için 
+sonsuza kadar beklemek yerine bir soket üzerinde bir zaman aşımı ayarlamaya karar verirse ortaya çıkar.İşlemin normal 
+şekilde tamamlanabilmesi için zaman aşımının gerçketen sona erdiğini gösterir

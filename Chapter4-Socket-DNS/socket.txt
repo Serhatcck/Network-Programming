@@ -1,0 +1,16 @@
+Socket adları soketlerin oluşturulması ve kullanımında birkaç noktada önemlidir
+Refarans olması için sizden argüman olarak bir çeşit soket adı talep eden tüm ana soket yöntemleri şunlardır.
+
+mysocket.accept(): sokete bağlanılan istemcini bilgi demeti döndürür
+
+mysocket.bind(address): Verilen yerel adresi sokete atar,böylece giden paketler için bir kaynak adrese sahip olur ve böylece 
+diğer makinelerden gelen bağlantıların bağlanabilecekleri bir adı olur
+
+mysocket.connect(address):Gönderilen verilerin uzak adrese yönlendirileceğini belirler.
+
+mysocket.getpeername(): Soketin bağlı olduğu uzak adresi döndürür
+
+mysocket.recfrom(): UDP soketleri için döndürülen verilerin bir dizesini alındığı adresle eşleştiren bir demet döndürür
+
+mysocket.sendto(data, address): Bağlı olmayan bir UDP bağlantı noktası, belirli bir uzak adresteki bir veri paketini başlatmak için
+yöntemi kullanır

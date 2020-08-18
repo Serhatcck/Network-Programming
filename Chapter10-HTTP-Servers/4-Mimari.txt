@@ -1,0 +1,12 @@
+Python ile http server oluşturmak için 4 farklı mimari kullanılabilir
+
+1- Python da yazılan ve WSGI uç noktanızı doğrudan kendi kodunda çağırabilen bir sunucu çalıştırın
+The Green Unicorn,en popüler olanıdır(gunicorn)
+2-Karma bir yaklaşım üreterelk, Python kodunuzda ayır bir WSGIDaemonProcess içinde çalıştırmak için yapılandırılmış
+mod_wsgi ile Apache'yi çalıştırın
+3-Güncorn gibi bir Python http sunucusunu statik dosyalara doğrudan hizmet edebilen ancak aynı zamanda python'da yazdığınız
+dinamik kaynaklar için ters proxy işlevi gören bir web sunucusunun arkasında çalıştırın.Hem apache hem de nginx,
+bu görevler için popüler ön üç sunucularıdır
+4-Varnish gibi saf bir ters proxy'nin arkasında oturan Apache veya ngnix'in arkasında bir Python http sunucusunu çalıştırın ve gerçek
+dünyaya bakan üçüncü bir katman oluşturun.Bu ters proxy'ler coğrafi olarak dağıtılabilir,böylece önbelleğe alınmış kaynarlar aynı 
+kıtadan değil, istemci makinelere yakın konumlardan sunulur

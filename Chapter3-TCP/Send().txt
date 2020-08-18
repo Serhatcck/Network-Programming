@@ -1,0 +1,22 @@
+Tcp ile send() gerçekleştirilirken üç farklı durum oluşabilir:
+
+Yerel sistemin ağ kartında yeterli bir ara bellek alanı olabilir. Bu durumda veriler hemen iletilir ve veri dizesinin uzunluğu
+döndürülür
+
+Başka bir olasılık,ağ kartının meşgul olöması ve bu soketin giden veri arabelleğinin dolu olması ve sistemin daha falza alan 
+ayıramaması veya verememesidir.Bu durumda send() basitçe engellenir ve veriler aktarım için kabul edilene kadar program duraklatılır
+
+Son bir olasılık ise , arabelleğin neredeyse dolu olması.Bu durumda veri bloğunun bir kısmı gönderilir.Ancak verilerin geri kalanı
+işlenmemiş halde bırakılır.Veri dizesinin başından itibaren kabul edilen bayt sayısı döndürülür
+
+
+Son olasılığı düşünerek aşşağıdaki gibi bir döngü yapılabilir
+
+bytes_sent = 0
+while bytes_sent < len(message):
+	message_remaining = message[bytes_sent:]
+	bytes_sent += s.send(message_remaining)
+
+bu durumla uğraşmamak için python kendi içinde sendall() metodunu sunar
+
+Ne yazık ki recv() için benzer bir metod yoktur

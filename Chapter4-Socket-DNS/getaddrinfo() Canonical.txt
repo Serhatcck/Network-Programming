@@ -1,0 +1,6 @@
+Server a bağlanılan bir istemcinin bilgilerini :
+mysock = server_sock.accept()
+addr, port = mysock.getpeername()
+getaddrinfo(addr, port, mysock.family, mysock.type, mysock.proto,socket.AI_CANONNAME)
+
+kodları ile alabilirsiniz

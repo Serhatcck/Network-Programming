@@ -1,0 +1,8 @@
+Server yazmaya karar veren bir mühendisin karşılaştığı temel iki sorun vardır:
+
+Birincisi gelen isteklere doğru şekilde yanıt verecek ve uygun yanıtları oluşturacak kod yazmanın temel zorluğudur.
+İkincisi ,bu ağ kodunun, sistem önyüklendiğinde otomatik olarak başlayan, etkinkiğini kalıcı bir depoya kaydeden,
+veritabanına veya arka ıuç veri deposuna bağlanamazsa bir uyarı veren bir Windows hizmeti veya Unix arka plan 
+programı içine yükleme görevidir
+
+Bu bölüm ve bu kitap birinci sorun üzerine odaklanmaktadır

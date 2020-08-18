@@ -1,0 +1,2 @@
+cafile değerini none seçerseniz otomatik olarak load_default_cers() yöntemi çağrılır.Bu, işletim sisteminizdeki tarayıcıların
+uzak bir siteye bağlanırken güveneceği tüm varsayılan CA sertifikalarını yüklemeye çalışır.
